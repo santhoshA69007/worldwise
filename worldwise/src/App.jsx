@@ -1,4 +1,4 @@
-import { BrowserRouter,Routes,Route} from "react-router-dom"
+import { BrowserRouter,Routes,Route,Navigate} from "react-router-dom"
 import Product from "./pages/Product.jsx";
 import Pricing from "./pages/Pricing.jsx";
 import Homepage from "./pages/Homepage.jsx"
@@ -9,7 +9,7 @@ import City from "./components/City.jsx";
 import CityList from "./components/CityList.jsx";
 import { useEffect, useState } from "react"; // Import the 'useState' function from the 'react' package
 import CountriesList from "./components/CountryList.jsx";
-import Form from "../../components/Form.jsx";
+import Form from "./components/Form.jsx";
 
 
 
@@ -55,9 +55,9 @@ function App() {
 
            <Route path="app" element={<AppLayout/>} >
 
-           
+             
             <Route path="cities/:id" element={<City/>}/>
-             <Route index element={<CityList cities={cities} isLoading={isLoading}/>}/>
+             <Route index element={<Navigate replace to="cities" />} />
              <Route path="cities" element={<CityList cities={cities} isLoading={isLoading}/>}/>
              <Route path="form" element={<Form/>}/>
              <Route path="countries" element={<CountriesList cities={cities} isLoading={isLoading}/>}/>

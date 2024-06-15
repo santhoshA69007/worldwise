@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 function Button ({children,onClick,type}) {
     console.log(type)
 
-    return (<button onClick={onClick} className={styles.btn}>
+    return (<button onClick={onClick} className={`${styles.btn} ${styles[type]}`}>
 
         {children}
        
