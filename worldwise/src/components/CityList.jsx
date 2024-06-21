@@ -3,9 +3,11 @@ import styles from './CityList.module.css'
 import Spinner from './Spinner'
 import PropTypes from 'prop-types';
 import Message from "./Message";
+import { useCities } from '../contexts/CitiesContext';
 
 
-function CityList({cities,isLoading}) {
+function CityList() {
+  const {cities,isLoading}=useCities();
 
     if (isLoading) return <Spinner/>;
     
@@ -21,6 +23,7 @@ function CityList({cities,isLoading}) {
     )
 }
 
+
 CityList.propTypes = {
     cities: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -33,4 +36,6 @@ CityList.propTypes = {
     })).isRequired,
     isLoading: PropTypes.bool.isRequired
   };
+
+
 export default CityList
