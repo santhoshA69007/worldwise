@@ -37,10 +37,13 @@ function CitiesProvider({children}) {
     fetchCities()
   },[])
 
-  async function createCity(newCity){
+
+
+async function createCity(newCity){
       try{
         setIsLoading(true);
-        const res=await fetch(`${BASE_URL}/cities`,{method:"POST",
+        const res=await fetch(`${BASE_URL}/cities`,
+          {method:"POST",
           body:JSON.stringify(newCity),
           headers:{"Content-Type": "application/json",
 
@@ -94,12 +97,17 @@ async function getCity(id){
     }>
     {children}
 
+
     </CitiesContext.Provider>
 }
+
+
 function useCities(){
     const context=useContext(CitiesContext);
     if(context===undefined)throw new Error("citiesCOntext used outside the provider")
         
-        return context
+    return context
 }
+
+
 export {CitiesProvider,useCities}
