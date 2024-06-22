@@ -43,13 +43,13 @@ useEffect(
   function (){
 
     if(lat&&lng)return;
-  async function fetchCityData(){
+    async function fetchCityData(){
 
     try{
          setIsLoadingGeocoding(  true)
          const res=await fetch(`${BASE_URL}?latitude=${lat}&longitude=${lng}`)
          const data=await res.json();
-         console.log(data);
+         console.log("this from from data da !!!!!!!!!!!!!!!!!!!!"+data);
          setCityName(data.city || data.locality || " ")
          setCountry(data.countryName)
          
