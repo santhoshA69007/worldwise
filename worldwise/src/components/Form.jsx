@@ -33,7 +33,6 @@ function Form() {
   const [country,setCountry] = useState();
   const {createCity}=useCities();
   const [lat,lng]=useUrlPosition();
-  const navigate=useNavigate();
   const [isLoadingGeocoding,setIsLoadingGeocoding] = useState(false)
   const [emoji,setEmoji]=useState("")
   const [geoCodingError,setGeoCodingError] = useState()
