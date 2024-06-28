@@ -1,41 +1,88 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": "73930385"
-    },
-    {
-      "cityName": "Madrid",
+      "id": "1107",
+      "cityName": "Borriol",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
+      "date": "2024-06-22T11:34:44.217Z",
       "notes": "",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
-      },
-      "id": "17806751"
+        "lat": "40.05600972932108",
+        "lng": "-0.029516389458683626"
+      }
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
+      "id": "5845",
+      "cityName": "Pallavaram",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2024-06-23T09:38:56.845Z",
+      "notes": "",
       "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": "98443197"
+        "lat": "12.994361439464427",
+        "lng": "80.09875741041519"
+      }
+    },
+    {
+      "id": "4ab5",
+      "cityName": "Pallavaram",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2024-06-23T09:38:56.845Z",
+      "notes": "",
+      "position": {
+        "lat": "12.994361439464427",
+        "lng": "80.09875741041519"
+      }
+    },
+    {
+      "id": "c368",
+      "cityName": "Castello de la Plana",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-06-23T09:40:30.376Z",
+      "notes": "",
+      "position": {
+        "lat": "39.982257409839534",
+        "lng": "-0.04753872250473413"
+      }
+    },
+    {
+      "id": "be99",
+      "cityName": "Castello de la Plana",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-06-23T09:40:30.376Z",
+      "notes": "",
+      "position": {
+        "lat": "39.982257409839534",
+        "lng": "-0.04753872250473413"
+      }
+    },
+    {
+      "id": "da9f",
+      "cityName": "Castello de la Plana",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-06-24T12:27:12.105Z",
+      "notes": "",
+      "position": {
+        "lat": "40.001818419284454",
+        "lng": "-0.05337597181954479"
+      }
+    },
+    {
+      "id": "54c4",
+      "cityName": "Castello de la Plana",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-06-24T12:27:12.105Z",
+      "notes": "",
+      "position": {
+        "lat": "40.001818419284454",
+        "lng": "-0.05337597181954479"
+      }
     }
-   
   ]
 }

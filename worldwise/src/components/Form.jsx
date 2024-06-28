@@ -10,6 +10,7 @@ import Spinner from "./Spinner";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {useCities}from "../contexts/CitiesContext.jsx"
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -32,11 +33,11 @@ function Form() {
 
   
   const [cityName, setCityName] = useState("");  
-
+const navigate=useNavigate();
   const [date, setDate] = useState(new Date());
   const [notes, setNotes] = useState("");
   const [country,setCountry] = useState("");
-  const {createCity}=useCities();
+  const {createCity,isLoading}=useCities();
   const [lat, lng] = useUrlPosition();
   console.log(lat,lng);
   
@@ -75,10 +76,13 @@ useEffect( function (){
       setGeoCodingError(err.message)
     }
 
+
     finally{
       setIsLoadingGeocoding(false);
       console.log(`${lat} and  ${lng} this from the useEffect Form`)
   }
+
+  
 }
 
 fetchCityData();
@@ -102,10 +106,10 @@ if(geoCodingError){
 if(!lat&&!lng) return <Message message="Start by Clicking on the map"/>
 
 
-function handleSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault();
 
-  if(!cityName || !date){
+  if(!cityName || !date)return 
 
     const newCity={
       cityName,
@@ -119,13 +123,14 @@ function handleSubmit(e) {
     
     createCity(newCity)
 
-  }
+    await createCity(newCity);
+    navigate("/app/cities");
 
   
 }
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className={`${styles.form} ${isLoading ? styles.loading : ""}`} onSubmit={handleSubmit}>
     <div className={styles.row}>
       <label htmlFor="cityName">City name</label>
       <input
@@ -153,7 +158,7 @@ function handleSubmit(e) {
 
     <div className={styles.buttons}>
     
-      <Button type="primary" > Add</Button>
+      <Button type="primary" onClick={handleSubmit} > Add</Button>
 
 
       <BackButton/>
